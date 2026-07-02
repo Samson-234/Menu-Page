@@ -1,0 +1,266 @@
+/* ==========================================================================
+   1. Reset & Global Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbf9f6; /* Soft cream background */
+    color: #2c2520; /* Deep espresso dark text */
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. Header Section
+   ========================================================================== */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.brand-logo {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #1a1512;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #70635a;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. Product Layout
+   ========================================================================== */
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(26, 21, 18, 0.05);
+}
+
+/* Responsive breakpoint for side-by-side desktop layout */
+@media (min-width: 768px) {
+    .product-container {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* ==========================================================================
+   4. Left Column: Image/Visuals
+   ========================================================================== */
+.image-placeholder {
+    background: linear-gradient(135deg, #2c2520, #14100e); /* Deep obsidian gradients */
+    height: 450px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bag-icon {
+    font-size: 6rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d96a3b; /* Warm roast orange */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   5. Right Column: Product Details
+   ========================================================================== */
+.product-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1512;
+    margin-bottom: 0.5rem;
+}
+
+.price-tag {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8c6239; /* Rich coffee accent color */
+    margin-bottom: 1.5rem;
+}
+
+.price-tag .size {
+    font-size: 1rem;
+    color: #70635a;
+    font-weight: 400;
+}
+
+.product-description {
+    color: #54473e;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* Benefit List */
+.benefit-list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    background-color: #fdfcfb;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #8c6239;
+}
+
+.benefit-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.benefit-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   6. Form & Interactive Controls
+   ========================================================================== */
+.order-form {
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1a1512;
+    margin-bottom: 1rem;
+}
+
+/* Radio Choice Groups */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.radio-group.vertical {
+    flex-direction: column;
+}
+
+/* Custom Radio Card Styling */
+.radio-label {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: #fbf9f6;
+    border: 2px solid #e6dfd9;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-label:hover {
+    border-color: #8c6239;
+    background-color: #fbf6f0;
+}
+
+/* Target checked elements via sibling selectors */
+.radio-label input[type="radio"]:checked + span,
+.radio-label input[type="radio"]:checked + .option-details strong {
+    color: #8c6239;
+}
+
+.radio-label:has(input[type="radio"]:checked) {
+    border-color: #8c6239;
+    background-color: #fbf6f0;
+}
+
+/* Pricing Option Card Layout */
+.pricing-option {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.option-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.option-details strong {
+    font-size: 0.95rem;
+    color: #1a1512;
+}
+
+.option-details span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #8c6239;
+}
+
+.popular-tag {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* Checkout Button */
+.cta-button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1512;
+    color: #ffffff;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #382f29;
+}

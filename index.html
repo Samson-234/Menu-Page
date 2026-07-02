@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind Co. - The Obsidian Roast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="brand-logo">☕ The Daily Grind Co.</h1>
+            <p class="tagline">Good taste to get your day going</p>
+        </header>
+
+        <main class="product-container">
+            <!-- Left Column: Visuals -->
+            <div class="product-image-section">
+                <div class="image-placeholder">
+                    <span class="bag-icon">🎒</span>
+                    <span class="badge">🔥 Best seller</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Product details & Form -->
+            <div class="product-info-section">
+                <h2 class="product-title">The Obsidian Roast</h2>
+                <div class="price-tag">
+                    $18.99 <span class="size">/ 12 oz. Bag</span>
+                </div>
+                <p class="product-description">
+                    A bold, single-origin dark roast with rich notes of dark chocolate, toasted macadamia, and a smooth, velvety finish. Delivered fresh to your door.
+                </p>
+
+                <ul class="benefit-list">
+                    <li>✨ 100% Organic Arabica Beans</li>
+                    <li>🌱 Sustainably sourced from Medellín, Colombia</li>
+                    <li>📦 Roasted weekly for maximum freshness</li>
+                </ul>
+
+                <form class="order-form" onsubmit="event.preventDefault();">
+                    <!-- Step 1 -->
+                    <div class="form-group">
+                        <label class="section-label">1. CHOOSE YOUR GRIND</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="grind" value="whole" checked>
+                                <span>Whole Bean</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="grind" value="coarse">
+                                <span>Coarse (French Press)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="grind" value="medium">
+                                <span>Medium (Drip)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-group">
+                        <label class="section-label">2. SELECT PACKAGE</label>
+                        <div class="radio-group vertical">
+                            <label class="radio-label pricing-option">
+                                <input type="radio" name="package" value="double" checked>
+                                <div class="option-details">
+                                    <strong>Double Pack (Save 10%)</strong>
+                                    <span>$34.18</span>
+                                </div>
+                                <span class="popular-tag">Most Popular</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">Add to Cart</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
